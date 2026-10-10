@@ -8,7 +8,7 @@ card-linked offers, bill negotiation), served by the api repo's `mcp-gpt-connect
 | `main` | dev | `https://mcp-gpt.dev.joinkudos.com/mcp` |
 | `prod` | prod | `https://mcp-gpt.prod.joinkudos.com/mcp` |
 
-This branch: **dev** (`https://mcp-gpt.dev.joinkudos.com/mcp`).
+This branch: **prod** (`https://mcp-gpt.prod.joinkudos.com/mcp`).
 
 ## Install
 

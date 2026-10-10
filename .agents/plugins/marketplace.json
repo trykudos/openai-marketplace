@@ -1,7 +1,7 @@
 {
     "name": "kudos",
     "interface": {
-        "displayName": "Kudos (dev)"
+        "displayName": "Kudos"
     },
     "plugins": [
         {

@@ -1,14 +1,15 @@
 # Kudos plugin marketplace for ChatGPT / Codex
 
 One plugin, `kudos`: the Kudos MCP server (wallet, card recommendations, transactions, benefits,
-card-linked offers, bill negotiation), served by the api repo's `mcp-gpt-connector`.
+card-linked offers, bill negotiation), served by the api repo's `mcp-connector` (the one Kudos MCP server for external agents; Meta Muse uses
+the same URL).
 
 | Branch | Environment | MCP server |
 |---|---|---|
-| `main` | dev | `https://mcp-gpt.dev.joinkudos.com/mcp` |
-| `prod` | prod | `https://mcp-gpt.prod.joinkudos.com/mcp` |
+| `main` | dev | `https://mcp.dev.joinkudos.com/mcp` |
+| `prod` | prod | `https://mcp.prod.joinkudos.com/mcp` |
 
-This branch: **prod** (`https://mcp-gpt.prod.joinkudos.com/mcp`).
+This branch: **prod** (`https://mcp.prod.joinkudos.com/mcp`).
 
 ## Install
 

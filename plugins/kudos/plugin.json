@@ -2,5 +2,19 @@
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
     "name": "kudos",
     "version": "0.1.0",
-    "description": "Kudos: your cards, card recommendations, transactions, benefits, card-linked offers and bill negotiation"
+    "description": "Kudos: your cards, card recommendations, transactions, benefits, card-linked offers and bill negotiation",
+    "extensions": {
+        "com.openai": {
+            "interface": {
+                "displayName": "Kudos",
+                "developerName": "Kudos",
+                "brandColor": "#FECF59",
+                "logo": "./assets/logo.png",
+                "composerIcon": "./assets/logo.png",
+                "websiteURL": "https://www.joinkudos.com",
+                "privacyPolicyURL": "https://www.joinkudos.com/privacy-policy",
+                "termsOfServiceURL": "https://www.joinkudos.com/terms"
+            }
+        }
+    }
 }

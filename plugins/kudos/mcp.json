@@ -3,7 +3,7 @@
     "mcpServers": {
         "kudos": {
             "type": "streamable-http",
-            "url": "https://mcp-gpt.dev.joinkudos.com/mcp"
+            "url": "https://mcp.dev.joinkudos.com/mcp"
         }
     }
 }

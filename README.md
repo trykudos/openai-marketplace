@@ -6,8 +6,8 @@ the same URL).
 
 | Branch | Environment | MCP server |
 |---|---|---|
-| `main` | dev | `https://mcp.dev.joinkudos.com/mcp` |
-| `prod` | prod | `https://mcp.prod.joinkudos.com/mcp` |
+| `main` | prod | `https://mcp.prod.joinkudos.com/mcp` |
+| `dev` | dev | `https://mcp.dev.joinkudos.com/mcp` |
 
 This branch: **dev** (`https://mcp.dev.joinkudos.com/mcp`).
 
@@ -16,7 +16,7 @@ This branch: **dev** (`https://mcp.dev.joinkudos.com/mcp`).
 In the ChatGPT desktop app: Settings → Plugins → Add → Add plugin marketplace.
 
 - Source: `trykudos/openai-marketplace`
-- Git ref: `main` (dev) or `prod`
+- Git ref: `main` (prod) or `dev`
 - Sparse paths: leave empty
 
 Then install **kudos** from the marketplace and ask a Kudos question; the first call opens the Kudos
@@ -30,5 +30,5 @@ plugins/kudos/plugin.json          plugin manifest
 plugins/kudos/mcp.json             MCP server URL (the only file that differs between branches)
 ```
 
-Change the plugin on `main`, then merge `main` into `prod` keeping prod's `mcp.json` URL
+Change the plugin on `dev`, then merge `dev` into `main` keeping main's `mcp.json` URL
 (and marketplace display name).

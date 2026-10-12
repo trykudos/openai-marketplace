@@ -1,0 +1,19 @@
+{
+    "name": "kudos",
+    "interface": {
+        "displayName": "Kudos (dev)"
+    },
+    "plugins": [
+        {
+            "name": "kudos",
+            "source": {
+                "source": "local",
+                "path": "./plugins/kudos"
+            },
+            "policy": {
+                "installation": "AVAILABLE"
+            },
+            "category": "Productivity"
+        }
+    ]
+}

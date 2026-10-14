@@ -3,17 +3,96 @@
     "name": "kudos",
     "version": "0.1.0",
     "description": "Kudos: your cards, card recommendations, transactions, benefits, card-linked offers and bill negotiation",
+    "author": {
+        "name": "Kudos",
+        "url": "https://www.joinkudos.com"
+    },
+    "homepage": "https://www.joinkudos.com",
+    "keywords": ["credit cards", "rewards", "benefits", "offers", "bill negotiation"],
     "extensions": {
         "com.openai": {
             "interface": {
                 "displayName": "Kudos",
+                "shortDescription": "Card rewards and savings",
+                "longDescription": "What Kudos does in ChatGPT: picks the best card in your wallet for a purchase, explains what your transactions earned, tracks unused card benefits and statement credits, finds card-linked offers, and negotiates bills (Kudos calls the provider for you).",
                 "developerName": "Kudos",
-                "brandColor": "#FECF59",
+                "category": "Finance",
+                "capabilities": [
+                    "Recommend the best card in your wallet for a merchant",
+                    "Show your card transactions and the rewards they earned",
+                    "Track unused card benefits and statement credits",
+                    "Find and track card-linked offers",
+                    "Negotiate a bill with your provider by phone"
+                ],
+                "defaultPrompt": [
+                    "Which card should I use at Whole Foods?",
+                    "What benefits am I not using on my cards?",
+                    "Can Kudos lower my internet bill?"
+                ],
+                "brandColor": "#E3A301",
+                "brandColorDark": "#FECF59",
                 "logo": "./assets/logo.png",
                 "composerIcon": "./assets/logo.png",
                 "websiteURL": "https://www.joinkudos.com",
+                "supportURL": "https://support.joinkudos.com",
                 "privacyPolicyURL": "https://www.joinkudos.com/privacy-policy",
                 "termsOfServiceURL": "https://www.joinkudos.com/terms"
+            },
+            "review": {
+                "demo_recording_url": "https://cdn.prod.joinkudos.com/demos/gpt-plugin-submission-demo.mp4",
+                "commerce": false,
+                "test_cases": {
+                    "positive": [
+                        {
+                            "description": "Card recommendation for a merchant",
+                            "prompt": "Which card should I use at Whole Foods?",
+                            "tools_triggered": ["recommend_card_for_purchase"],
+                            "expected_behavior": "Ranks the wallet's cards best first for Whole Foods and explains the earn rate, plus any card-linked offer or credit that applies."
+                        },
+                        {
+                            "description": "Spending at a merchant over a date range",
+                            "prompt": "What did I spend at Uber last month?",
+                            "tools_triggered": ["get_transactions"],
+                            "expected_behavior": "Lists the Uber transactions from last month with amounts, the card used and rewards earned, and gives the total."
+                        },
+                        {
+                            "description": "Outstanding card benefits",
+                            "prompt": "What benefits am I still not using on my cards?",
+                            "tools_triggered": ["get_benefits"],
+                            "expected_behavior": "Lists the PENDING and NEEDS_CONFIRMATION benefits and credits per card with their value and period, and links to the Benefits Tracker."
+                        },
+                        {
+                            "description": "Card-linked offers at a merchant",
+                            "prompt": "Do I have any card-linked offers at Nike?",
+                            "tools_triggered": ["get_card_linked_offers"],
+                            "expected_behavior": "Shows the Nike offers on the user's cards (reward, minimum spend, expiry, whether activated), or says there are none."
+                        },
+                        {
+                            "description": "Bill negotiation merchants",
+                            "prompt": "Which bills can Kudos negotiate for me?",
+                            "tools_triggered": ["get_bill_negotiation_merchants"],
+                            "expected_behavior": "Lists the providers and service types Kudos can negotiate, and offers to start a negotiation for one of them."
+                        }
+                    ],
+                    "negative": [
+                        {
+                            "description": "Request to move money",
+                            "prompt": "Pay off my Amex balance with my checking account."
+                        },
+                        {
+                            "description": "General card shopping unrelated to the user's wallet",
+                            "prompt": "Apply for the Chase Sapphire Reserve for me."
+                        },
+                        {
+                            "description": "Unrelated question",
+                            "prompt": "What's the weather in Boston tomorrow?"
+                        }
+                    ]
+                }
+            },
+            "publication": {
+                "countries": ["US"],
+                "release_notes": "Initial release: card recommendations, transactions, benefits tracking, card-linked offers and bill negotiation from your Kudos account."
             }
         }
     }

@@ -3,7 +3,17 @@
     "mcpServers": {
         "kudos": {
             "type": "streamable-http",
-            "url": "https://mcp.prod.joinkudos.com/mcp"
+            "url": "https://mcp.prod.joinkudos.com/mcp",
+            "extensions": {
+                "com.openai": {
+                    "auth": {
+                        "type": "oauth",
+                        "client": {
+                            "mode": "dcr"
+                        }
+                    }
+                }
+            }
         }
     }
 }

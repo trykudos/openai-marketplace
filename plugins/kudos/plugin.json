@@ -77,15 +77,18 @@
                     "negative": [
                         {
                             "description": "Request to move money",
-                            "prompt": "Pay off my Amex balance with my checking account."
+                            "prompt": "Pay off my Amex balance with my checking account.",
+                            "expected_behavior": "Calls no Kudos tool. Says Kudos can't move money or pay card balances, and offers what it can do (e.g. show recent transactions or unused benefits on the Amex card)."
                         },
                         {
                             "description": "General card shopping unrelated to the user's wallet",
-                            "prompt": "Apply for the Chase Sapphire Reserve for me."
+                            "prompt": "Apply for the Chase Sapphire Reserve for me.",
+                            "expected_behavior": "Calls no Kudos tool. Says Kudos can't apply for cards on the user's behalf, and offers to help with the cards already in their Kudos wallet."
                         },
                         {
                             "description": "Unrelated question",
-                            "prompt": "What's the weather in Boston tomorrow?"
+                            "prompt": "What's the weather in Boston tomorrow?",
+                            "expected_behavior": "Calls no Kudos tool; the question is unrelated to Kudos."
                         }
                     ]
                 }

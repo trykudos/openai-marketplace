@@ -5,7 +5,7 @@
     },
     "plugins": [
         {
-            "name": "kudos",
+            "name": "kudos-debug",
             "source": {
                 "source": "local",
                 "path": "./plugins/kudos"

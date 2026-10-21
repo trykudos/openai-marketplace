@@ -1,6 +1,6 @@
 {
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-    "name": "kudos-debug-0.1.0",
+    "name": "kudos-debug",
     "version": "0.1.0",
     "description": "Kudos: your cards, card recommendations, transactions, benefits, card-linked offers and bill negotiation",
     "author": {
@@ -12,7 +12,7 @@
     "extensions": {
         "com.openai": {
             "interface": {
-                "displayName": "Kudos",
+                "displayName": "Kudos Debug",
                 "shortDescription": "Card rewards and savings",
                 "longDescription": "What Kudos does in ChatGPT: picks the best card in your wallet for a purchase, explains what your transactions earned, tracks unused card benefits and statement credits, finds card-linked offers, and negotiates bills (Kudos calls the provider for you).",
                 "developerName": "Kudos",

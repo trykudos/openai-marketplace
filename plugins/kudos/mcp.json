@@ -1,7 +1,7 @@
 {
     "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
     "mcpServers": {
-        "kudos": {
+        "kudos-debug": {
             "type": "streamable-http",
             "url": "https://mcp.prod.joinkudos.com/mcp",
             "extensions": {

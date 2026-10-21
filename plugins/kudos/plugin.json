@@ -1,6 +1,6 @@
 {
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-    "name": "kudos",
+    "name": "kudos-debug-0.1.0",
     "version": "0.1.0",
     "description": "Kudos: your cards, card recommendations, transactions, benefits, card-linked offers and bill negotiation",
     "author": {
